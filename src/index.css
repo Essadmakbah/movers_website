@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+/*
+ * Movers marketing site tokens (visual system spec, section 1).
+ * Non-inline @theme: utilities resolve to var(--color-*), so redefining the
+ * variables under prefers-color-scheme re-themes every utility. No dark: variants.
+ */
+@theme {
+  /* ---------- Type ---------- */
+  --font-display: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Work Sans Variable", "Work Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --text-display-xl: clamp(2.25rem, 1.45rem + 3.8vw, 4.25rem);
+  --text-display-xl--line-height: 1.08;
+  --text-display-xl--letter-spacing: -0.035em;
+  --text-display-xl--font-weight: 800;
+
+  --text-display-l: clamp(2rem, 1.45rem + 2.3vw, 3.25rem);
+  --text-display-l--line-height: 1.1;
+  --text-display-l--letter-spacing: -0.03em;
+  --text-display-l--font-weight: 700;
+
+  --text-statement: clamp(1.75rem, 1.1rem + 2.7vw, 3.25rem);
+  --text-statement--line-height: 1.14;
+  --text-statement--letter-spacing: -0.025em;
+  --text-statement--font-weight: 600;
+
+  --text-title: 1.375rem;
+  --text-title--line-height: 1.25;
+  --text-title--letter-spacing: -0.015em;
+  --text-title--font-weight: 700;
+
+  --text-lede: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --text-lede--line-height: 1.55;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+
+  --text-meta: 0.875rem;
+  --text-meta--line-height: 1.5;
+
+  --text-micro: 0.78125rem;
+  --text-micro--line-height: 1.2;
+  --text-micro--letter-spacing: 0.01em;
+  --text-micro--font-weight: 600;
+
+  /* ---------- Colour: LIGHT (default) ---------- */
+  --color-canvas: #f4f8f6;
+  --color-surface: #ffffff;
+  --color-surface-alt: #edf3f0;
+  --color-surface-container: #e6ede9;
+  --color-tray: rgb(214 223 218 / 0.45);
+  --color-line: #e4ece8;
+  --color-line-strong: #c4cfca;
+
+  --color-ink: #131a18;
+  --color-ink-2: #3e4945;
+  --color-ink-3: #5d6964;
+
+  --color-brand: #005344;
+  --color-brand-strong: #00382e;
+  --color-brand-container: #006d5b;
+  --color-on-brand: #ffffff;
+  --color-on-brand-muted: #96ebd5;
+  --color-brand-ink: #005344;
+  --color-brand-tint: #e2efec;
+  --color-mint: #96ebd5;
+  --color-mint-dim: #81d6c0;
+  --color-highlight: #96ebd5;                   /* place-name band in Local (mint; gold is reserved) */
+
+  --color-action: #005344;
+  --color-action-hover: #00382e;
+  --color-on-action: #ffffff;
+  --color-focus: #006d5b;
+
+  --color-gold: #fdbf35;
+  --color-on-gold: #3d2c00;
+  --color-gold-tint: #fff5e1;
+  --color-gold-line: #f6e2b5;
+  --color-gold-deep: #7b5900;
+
+  --color-teal: #00505f;
+
+  --color-positive-bg: #e6f4ef;  --color-positive-fg: #00614f;  --color-positive-line: #c6e5d9;
+  --color-warning-bg:  #fff5e1;  --color-warning-fg:  #7b5900;  --color-warning-line:  #f6e2b5;
+  --color-info-bg:     #e1f1f5;  --color-info-fg:     #00505f;  --color-info-line:     #bcdfe8;
+  --color-danger-bg:   #ffeeec;  --color-danger-fg:   #93000a;  --color-danger-line:   #ffdad6;
+  --color-neutral-bg:  #e9efec;  --color-neutral-fg:  #4a5551;  --color-neutral-line:  #d6dfda;
+
+  --color-device: #0e1614;
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-core: 26px;
+  --radius-shell: 32px;
+  --radius-device: 40px;
+  --radius-screen: 32px;
+
+  /* ---------- Shadows: tinted #00241f ---------- */
+  --shadow-hairline: 0 0 0 1px var(--color-line);
+  --shadow-float: 0 1px 2px rgb(0 36 31 / 0.06), 0 10px 28px -8px rgb(0 36 31 / 0.16);
+  --shadow-raised: 0 3px 10px rgb(0 36 31 / 0.09);
+  --shadow-device: 0 2px 4px rgb(0 36 31 / 0.06), 0 24px 48px -16px rgb(0 36 31 / 0.24), 0 56px 96px -32px rgb(0 36 31 / 0.2);
+  --shadow-core-hi: inset 0 1px 0 rgb(255 255 255 / 0.7);
+  --shadow-brand-hi: inset 0 1px 0 rgb(255 255 255 / 0.1);
+  --shadow-tab: 0 1px 2px rgb(0 36 31 / 0.08), 0 0 0 1px var(--color-line);
+
+  /* ---------- Easing ---------- */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  color-scheme: light dark;
+  --d-press: 140ms;
+  --d-fast: 200ms;
+  --d-base: 280ms;
+  --d-reveal: 700ms;
+  --z-float: 10;
+  --z-nav: 40;
+  --z-scrim: 45;
+  --z-menu: 50;
+  --z-grain: 60;
+  --z-skip: 70;
+  --nav-h: 72px;
+  --halo: rgb(150 235 213 / 0.45);
+}
+
+/* ---------- Colour: DARK ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-canvas: #0a1412;
+    --color-surface: #101c19;
+    --color-surface-alt: #142320;
+    --color-surface-container: #1a2b27;
+    --color-tray: rgb(26 43 39 / 0.55);
+    --color-line: #1f302b;
+    --color-line-strong: #2f4540;
+
+    --color-ink: #e4ede9;
+    --color-ink-2: #b4c4be;
+    --color-ink-3: #8a9c96;
+
+    --color-brand: #00382e;
+    --color-brand-strong: #002a22;
+    --color-brand-container: #004d40;
+    --color-on-brand: #eef7f3;
+    --color-on-brand-muted: #81d6c0;
+    --color-brand-ink: #81d6c0;
+    --color-brand-tint: #12302a;
+    --color-highlight: #1d5a4c;
+
+    --color-action: #81d6c0;
+    --color-action-hover: #96ebd5;
+    --color-on-action: #00281f;
+    --color-focus: #96ebd5;
+
+    --color-gold-tint: #241d0d;
+    --color-gold-line: #43360f;
+    --color-gold-deep: #f5c75a;
+
+    --color-positive-bg: #0f2e27;  --color-positive-fg: #81d6c0;  --color-positive-line: #1d4a3f;
+    --color-warning-bg:  #2b220e;  --color-warning-fg:  #f5c75a;  --color-warning-line:  #4a3b14;
+    --color-info-bg:     #0d2a31;  --color-info-fg:     #7fcfe0;  --color-info-line:     #1b4650;
+    --color-danger-bg:   #3a1714;  --color-danger-fg:   #ffb4ab;  --color-danger-line:   #5c2520;
+    --color-neutral-bg:  #1a2522;  --color-neutral-fg:  #b4c4be;  --color-neutral-line:  #2b3a36;
+
+    --shadow-float: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -8px rgb(0 0 0 / 0.55), inset 0 1px 0 rgb(255 255 255 / 0.04);
+    --shadow-raised: 0 3px 10px rgb(0 0 0 / 0.45);
+    --shadow-device: 0 0 0 1px rgb(255 255 255 / 0.07), 0 24px 48px -16px rgb(0 0 0 / 0.6), 0 56px 96px -32px rgb(0 0 0 / 0.5);
+    --shadow-core-hi: inset 0 1px 0 rgb(255 255 255 / 0.04);
+    --shadow-brand-hi: inset 0 1px 0 rgb(150 235 213 / 0.1), 0 0 0 1px #0d4a3e;
+    --shadow-tab: 0 1px 2px rgb(0 0 0 / 0.4), 0 0 0 1px var(--color-line-strong);
+
+    --halo: rgb(0 109 91 / 0.35);
+  }
+}
+
+@media (min-width: 768px) {
+  :root { --nav-h: 80px; }
+}
+
+/* ---------- Base / mobile-native floor ---------- */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 16px);
+  }
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; }
+  p { text-wrap: pretty; }
+  img { max-width: 100%; }
+  button, a, [role="tab"] { touch-action: manipulation; }
+  button, [role="tab"], .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-on-gold);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
+
+@utility num {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* Hero highlight: gold band under "in one app." (one of the three gold jobs) */
+.hero-highlight {
+  background-image: linear-gradient(var(--color-gold), var(--color-gold));
+  background-repeat: no-repeat;
+  background-position: 0 94%;
+  background-size: 100% 0.12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding-right: 0.06em;
+}
