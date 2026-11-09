@@ -230,7 +230,7 @@ function StatusCycler() {
 
 export default function Features() {
   return (
-    <section id="why-movers" aria-labelledby="why-title" className="py-20 md:py-28 lg:py-32">
+    <section id="why-moviin" aria-labelledby="why-title" className="py-20 md:py-28 lg:py-32">
       <Container>
         <Reveal>
           <h2 id="why-title" className="max-w-[20ch] font-display text-display-l text-ink">
@@ -295,7 +295,7 @@ export default function Features() {
             >
               <Phone
                 src="/screens/payment-method.png"
-                alt="Movers app payment screen where you choose how to pay for your move."
+                alt="Moviin app payment screen where you choose how to pay for your move."
                 className="self-start"
               />
             </div>

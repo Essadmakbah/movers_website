@@ -25,14 +25,14 @@ export default function Cta() {
                   Ready when your boxes are.
                 </h2>
                 <p className="mt-4 max-w-[38ch] text-lede text-on-brand-muted">
-                  Get the Movers app and book your move in a few minutes.
+                  Get the Moviin app and book your move in a few minutes.
                 </p>
                 <div className="mt-8">
                   <StoreBadges
                     ios={STORE_LINKS.customerIos}
                     android={STORE_LINKS.customerAndroid}
                     surface="panel"
-                    appName="Movers app"
+                    appName="Moviin app"
                   />
                 </div>
               </div>
@@ -40,7 +40,7 @@ export default function Cta() {
               <div className="flex justify-center px-6 lg:items-end lg:px-0 lg:pr-16">
                 <Phone
                   src="/screens/booking-confirmed.png"
-                  alt="Movers app screen confirming a booked move."
+                  alt="Moviin app screen confirming a booked move."
                   className="-mb-24 lg:-mb-20 lg:mt-16"
                 />
               </div>
@@ -54,7 +54,7 @@ export default function Cta() {
             href="#drive"
             className="group inline-flex min-h-11 items-center gap-1.5 font-display font-semibold text-brand-ink"
           >
-            Drive with Movers
+            Drive with Moviin
             <ArrowRight
               size={16}
               aria-hidden="true"

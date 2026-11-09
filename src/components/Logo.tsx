@@ -1,7 +1,7 @@
 export type LogoProps = {
   /** Tile size in px (square). Default 40. */
   size?: number;
-  /** Show the "Movers" wordmark next to the tile. Default true. */
+  /** Show the "Moviin" wordmark next to the tile. Default true. */
   wordmark?: boolean;
   className?: string;
 };
@@ -16,10 +16,10 @@ export default function Logo({ size = 40, wordmark = true, className = "" }: Log
         className="grid shrink-0 place-items-center rounded-[12px] bg-white ring-1 ring-line"
         style={{ width: size, height: size }}
       >
-        <img src="/mark.png" alt={wordmark ? "" : "Movers"} width={markW} height={markH} className="block" />
+        <img src="/mark.png" alt={wordmark ? "" : "Moviin"} width={markW} height={markH} className="block" />
       </span>
       {wordmark ? (
-        <span className="font-display text-[18px] font-extrabold tracking-[-0.02em] text-ink">Movers</span>
+        <span className="font-display text-[18px] font-extrabold tracking-[-0.02em] text-ink">Moviin</span>
       ) : null}
     </span>
   );

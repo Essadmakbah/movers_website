@@ -54,21 +54,21 @@ const CUSTOMER_SCREENS: Screen[] = [
     w: 183,
     h: 512,
     label: "Fare",
-    alt: "Movers fare review screen with an example itemised fare of GMD 4,500 before booking.",
+    alt: "Moviin fare review screen with an example itemised fare of GMD 4,500 before booking.",
   },
   {
     src: "/screens/booking-confirmed.png",
     w: 226,
     h: 512,
     label: "Booked",
-    alt: "Movers booking confirmation screen with the move reference, date and time.",
+    alt: "Moviin booking confirmation screen with the move reference, date and time.",
   },
   {
     src: "/screens/live-tracking.png",
     w: 226,
     h: 512,
     label: "Tracking",
-    alt: "Movers live tracking screen with the truck on the map and the arrival time.",
+    alt: "Moviin live tracking screen with the truck on the map and the arrival time.",
   },
 ];
 
@@ -145,7 +145,7 @@ function DispatchVisual() {
     <div className="flex w-full justify-center">
       <BrowserFrame
         src="/screens/dispatch.png"
-        alt="Movers dispatch console with the booking queue and crew assignment."
+        alt="Moviin dispatch console with the booking queue and crew assignment."
         width={512}
         height={410}
       />
@@ -198,7 +198,7 @@ export default function Apps() {
         <Reveal delay={0.08}>
           <div
             role="tablist"
-            aria-label="Movers apps"
+            aria-label="Moviin apps"
             className="grid w-full grid-cols-3 rounded-full bg-surface-container p-1 ring-1 ring-line sm:inline-grid sm:w-auto"
           >
             {TABS.map((t, i) => {
@@ -282,7 +282,7 @@ export default function Apps() {
                               href="#drive"
                               className="group mt-8 inline-flex min-h-11 items-center gap-2 font-display font-semibold text-brand-ink"
                             >
-                              Drive with Movers
+                              Drive with Moviin
                               <ArrowRight
                                 size={18}
                                 aria-hidden="true"

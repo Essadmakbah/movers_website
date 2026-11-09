@@ -6,13 +6,13 @@ import Button from "../components/Button.tsx";
 
 const LINKS = [
   { href: "#how-it-works", label: "How it works" },
-  { href: "#why-movers", label: "Why Movers" },
+  { href: "#why-moviin", label: "Why Moviin" },
   { href: "#apps", label: "The apps" },
-  { href: "#drive", label: "Drive with Movers" },
+  { href: "#drive", label: "Drive with Moviin" },
   { href: "#faq", label: "FAQ" },
 ] as const;
 
-const SECTION_IDS = ["how-it-works", "why-movers", "apps", "gambia", "drive", "faq", "get-app"];
+const SECTION_IDS = ["how-it-works", "why-moviin", "apps", "gambia", "drive", "faq", "get-app"];
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const EASE_IN_OUT = "cubic-bezier(0.77, 0, 0.175, 1)";
 
@@ -143,7 +143,7 @@ export default function Nav() {
             scrolled ? "shadow-[var(--shadow-float)]" : ""
           }`}
         >
-          <a href="#top" className="flex items-center rounded-full pr-2" aria-label="Movers, back to top">
+          <a href="#top" className="flex items-center rounded-full pr-2" aria-label="Moviin, back to top">
             <Logo size={40} />
           </a>
 

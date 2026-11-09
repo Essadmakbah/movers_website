@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Movers marketing site tokens (visual system spec, section 1).
+ * Moviin marketing site tokens (visual system spec, section 1).
  * Non-inline @theme: utilities resolve to var(--color-*), so redefining the
  * variables under prefers-color-scheme re-themes every utility. No dark: variants.
  */

@@ -26,7 +26,7 @@ export default function Drive() {
                 id="drive-title"
                 className="mt-5 max-w-[18ch] font-display text-display-l text-ink"
               >
-                Own a truck? Drive with Movers.
+                Own a truck? Drive with Moviin.
               </h2>
               <p className="mt-4 max-w-[46ch] text-lede text-ink-2">
                 Register in the crew app, add your details, and start getting jobs once our team approves you.
@@ -55,7 +55,7 @@ export default function Drive() {
                 ios={STORE_LINKS.crewIos}
                 android={STORE_LINKS.crewAndroid}
                 surface="page"
-                appName="Movers crew app"
+                appName="Moviin crew app"
               />
             </Reveal>
           </div>

@@ -150,7 +150,7 @@ export default function Hero() {
             >
               <Phone
                 src="/screens/live-tracking.png"
-                alt="Movers app live tracking screen showing the driver on the way to pickup."
+                alt="Moviin app live tracking screen showing the driver on the way to pickup."
                 priority
               />
             </motion.div>

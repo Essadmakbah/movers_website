@@ -3,9 +3,9 @@ import Logo from "../components/Logo.tsx";
 
 const LINKS = [
   { href: "#how-it-works", label: "How it works" },
-  { href: "#why-movers", label: "Why Movers" },
+  { href: "#why-moviin", label: "Why Moviin" },
   { href: "#apps", label: "The apps" },
-  { href: "#drive", label: "Drive with Movers" },
+  { href: "#drive", label: "Drive with Moviin" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer id="footer" className="border-t border-line py-10 pb-[calc(2.5rem+env(safe-area-inset-bottom,0px))]">
       <Container className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <a href="#top" aria-label="Movers, back to top" className="w-fit rounded-xl">
+        <a href="#top" aria-label="Moviin, back to top" className="w-fit rounded-xl">
           <Logo size={32} />
         </a>
         <nav aria-label="Footer">
@@ -30,7 +30,7 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <p className="text-sm text-ink-3">© 2026 Movers. Banjul, The Gambia.</p>
+        <p className="text-sm text-ink-3">© 2026 Moviin. Banjul, The Gambia.</p>
       </Container>
     </footer>
   );
